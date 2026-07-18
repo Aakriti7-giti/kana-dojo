@@ -37,9 +37,10 @@ export default async function KanjiPage({
   return (
     <>
       <Breadcrumbs
+        className='hidden'
         items={[
-          { name: t('menu.home'), url: `/${locale}` },
-          { name: t('menu.kanji'), url: `/${locale}/kanji` },
+          { name: t('menu.home'), url: '/' },
+          { name: t('menu.kanji'), url: '/kanji' },
         ]}
       />
       <CourseSchema

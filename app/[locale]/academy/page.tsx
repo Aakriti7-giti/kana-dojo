@@ -72,10 +72,10 @@ export default async function AcademyPage({ params }: AcademyPageProps) {
     <>
       {/* Structured Data for SEO */}
       <Breadcrumbs
-        className='mx-auto mt-8 mb-8 max-w-6xl px-4'
+        className='hidden'
         items={[
-          { name: t('menu.home'), url: `/${locale}` },
-          { name: t('menu.academy'), url: `/${locale}/academy` },
+          { name: t('menu.home'), url: '/' },
+          { name: t('menu.academy'), url: '/academy' },
         ]}
       />
       <StructuredData data={itemListSchema} />

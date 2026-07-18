@@ -43,9 +43,10 @@ export default async function VocabularyPage({
   return (
     <>
       <Breadcrumbs
+        className='hidden'
         items={[
-          { name: t('menu.home'), url: `/${locale}` },
-          { name: t('menu.vocabulary'), url: `/${locale}/vocabulary` },
+          { name: t('menu.home'), url: '/' },
+          { name: t('menu.vocabulary'), url: '/vocabulary' },
         ]}
       />
       <CourseSchema

@@ -11,9 +11,6 @@ export interface BreadcrumbSchemaProps {
 
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://kanadojo.com';
-  const getAbsoluteUrl = (url: string) =>
-    url.startsWith('http') ? url : new URL(url, baseUrl).toString();
-
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -21,7 +18,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: getAbsoluteUrl(item.url),
+      item: new URL(item.url, baseUrl).toString(),
     })),
   };
 }

@@ -37,9 +37,10 @@ export default async function KanaPage({
   return (
     <>
       <Breadcrumbs
+        className='hidden'
         items={[
-          { name: t('menu.home'), url: `/${locale}` },
-          { name: t('menu.kana'), url: `/${locale}/kana` },
+          { name: t('menu.home'), url: '/' },
+          { name: t('menu.kana'), url: '/kana' },
         ]}
       />
       <CourseSchema

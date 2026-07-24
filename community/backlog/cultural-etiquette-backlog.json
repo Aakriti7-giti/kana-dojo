@@ -104,7 +104,7 @@
     "dont": "無連絡で遅れて言い訳を続ける",
     "note": "先に謝罪が基本。",
     "id": 12,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

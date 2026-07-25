@@ -1066,7 +1066,7 @@
     "game": "Dragon Quest series",
     "character": "Recurring command voice",
     "id": 107,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

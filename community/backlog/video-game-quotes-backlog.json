@@ -686,7 +686,7 @@
     "game": "Street Fighter series",
     "character": "Ryu",
     "id": 69,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

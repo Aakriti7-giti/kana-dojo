@@ -13,20 +13,27 @@ export const isKanaInputAnswerCorrect = ({
   isReverse,
   altRomanjiMap,
 }: KanaInputAnswerOptions): boolean => {
-  const normalizedInput = inputValue.trim();
+  // Normalize Unicode form and strip surrounding whitespace so that input
+  // from an IME or copy-paste (which may arrive in a different NFC/NFD form)
+  // is compared on equal footing with the stored answer.
+  const normalizedInput = inputValue.trim().normalize('NFC');
   if (!normalizedInput) return false;
 
   if (isReverse) {
-    return normalizedInput === targetChar;
+    // Reverse mode: user types the kana character itself.
+    return normalizedInput === targetChar.normalize('NFC');
   }
 
+  // Normal mode: user types romaji. Compare case- and Unicode-insensitively.
   const lowerInput = normalizedInput.toLowerCase();
-  if (lowerInput === targetChar || normalizedInput === correctChar) {
+  const lowerTarget = targetChar.toLowerCase().normalize('NFC');
+
+  if (lowerInput === lowerTarget) {
     return true;
   }
 
   const alternatives = altRomanjiMap.get(correctChar);
   return alternatives
-    ? alternatives.some(alt => lowerInput === alt.toLowerCase())
+    ? alternatives.some(alt => lowerInput === alt.toLowerCase().normalize('NFC'))
     : false;
 };

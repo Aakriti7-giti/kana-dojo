@@ -312,6 +312,12 @@
     "secondaryColor": "oklch(60.0% 0.085 25.0 / 1)"
   },
   {
+    "id": "moss-temple",
+    "backgroundColor": "oklch(22.0% 0.045 145.0 / 1)",
+    "mainColor": "oklch(65.0% 0.155 140.0 / 1)",
+    "secondaryColor": "oklch(55.0% 0.100 120.0 / 1)"
+  },
+  {
     "id": "yukata-blue",
     "backgroundColor": "oklch(19.0% 0.035 250.0 / 1)",
     "mainColor": "oklch(70.0% 0.120 240.0 / 1)",

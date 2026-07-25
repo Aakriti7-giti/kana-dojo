@@ -44,6 +44,18 @@ describe('community-themes.json', () => {
     expect(themes.filter(t => t.id === 'sea-glass').length).toBe(1);
   });
 
+  it('should contain the moss-temple theme with correct colors', () => {
+    const theme = themes.find(t => t.id === 'moss-temple');
+    expect(theme).toBeDefined();
+    expect(theme).toHaveProperty('backgroundColor', 'oklch(22.0% 0.045 145.0 / 1)');
+    expect(theme).toHaveProperty('mainColor', 'oklch(65.0% 0.155 140.0 / 1)');
+    expect(theme).toHaveProperty('secondaryColor', 'oklch(55.0% 0.100 120.0 / 1)');
+  });
+
+  it('moss-temple should have a unique id among themes', () => {
+    expect(themes.filter(t => t.id === 'moss-temple').length).toBe(1);
+  });
+
   it('should contain the yukata-blue theme with correct colors', () => {
     const theme = themes.find(t => t.id === 'yukata-blue');
     expect(theme).toBeDefined();

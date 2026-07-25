@@ -27,6 +27,18 @@ describe('isKanaInputAnswerCorrect', () => {
     ).toBe(true);
   });
 
+  it('compares primary romaji case-insensitively after Unicode normalization', () => {
+    expect(
+      isKanaInputAnswerCorrect({
+        inputValue: 'o\u0304',
+        correctChar: 'お',
+        targetChar: 'Ō',
+        isReverse: false,
+        altRomanjiMap,
+      }),
+    ).toBe(true);
+  });
+
   it('accepts alternative romaji in normal mode', () => {
     expect(
       isKanaInputAnswerCorrect({
@@ -93,5 +105,17 @@ describe('isKanaInputAnswerCorrect', () => {
         altRomanjiMap,
       }),
     ).toBe(false);
+  });
+
+  it('accepts canonically equivalent kana in reverse mode', () => {
+    expect(
+      isKanaInputAnswerCorrect({
+        inputValue: 'か\u3099',
+        correctChar: 'ga',
+        targetChar: 'が',
+        isReverse: true,
+        altRomanjiMap,
+      }),
+    ).toBe(true);
   });
 });

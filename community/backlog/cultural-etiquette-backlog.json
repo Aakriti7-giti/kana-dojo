@@ -707,7 +707,7 @@
     "dont": "両側を塞ぐ",
     "note": "地域差に注意。",
     "id": 79,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

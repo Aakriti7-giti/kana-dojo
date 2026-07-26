@@ -73,7 +73,7 @@ const CHAR_SIZE_CLASSES =
   'text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl';
 const DIMMED_OPACITY_CLASS = 'opacity-25';
 // Flip this to `true` to render decorations while developing locally.
-const ENABLE_DECORATIONS_IN_DEVELOPMENT = false;
+const ENABLE_DECORATIONS_IN_DEVELOPMENT = true;
 const ENABLE_MODE_SETUP_DECORATIONS = false;
 const ENABLE_STREAK_MILESTONE_DECORATIONS = true;
 

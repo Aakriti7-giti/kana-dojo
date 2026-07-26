@@ -164,7 +164,6 @@ export default function StreakMilestoneOverlay({
             feedbackContent={null}
             actionLabel='continue'
             onAction={onDismiss}
-            className='z-[80]'
           />
           <BottomBar />
         </motion.div>

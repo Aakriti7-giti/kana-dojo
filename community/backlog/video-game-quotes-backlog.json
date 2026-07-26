@@ -556,7 +556,7 @@
     "game": "Onimusha series",
     "character": "Nobunaga Oda",
     "id": 56,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

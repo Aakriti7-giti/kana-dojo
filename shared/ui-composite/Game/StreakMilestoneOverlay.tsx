@@ -11,6 +11,7 @@ import { GameBottomBar } from '@/shared/ui-composite/Game/GameBottomBar';
 import BottomBar from '@/shared/ui-composite/layout/BottomBar';
 
 const STREAK_MILESTONE_AD_SLOT = '2642983933';
+const ENABLE_STREAK_MILESTONE_DECORATIONS = false;
 const isStreakMilestoneAdEnabled =
   process.env.NODE_ENV === 'production' &&
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
@@ -113,7 +114,7 @@ export default function StreakMilestoneOverlay({
           aria-modal='true'
           aria-label={`${milestone} in a row`}
         >
-          {!isGlassMode && (
+          {ENABLE_STREAK_MILESTONE_DECORATIONS && !isGlassMode && (
             <div className='absolute inset-0 -z-10'>
               <Suspense fallback={<></>}>
                 <Decorations
@@ -130,12 +131,12 @@ export default function StreakMilestoneOverlay({
             variants={contentVariants}
             initial='hidden'
             animate='visible'
-            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-56 text-center select-none sm:pb-48'
+            className='mx-auto flex w-full min-w-0 max-w-4xl flex-col items-center gap-5 px-6 pb-44 text-center select-none sm:pb-48'
           >
             <motion.button
               variants={itemVariants}
               className={cn(
-                'inline-flex h-28 w-28 items-center justify-center rounded-4xl border-b-20 border-(--secondary-color-accent) bg-(--secondary-color) text-(--background-color) transition-all duration-200',
+                'hidden h-28 w-28 items-center justify-center rounded-4xl border-b-20 border-(--secondary-color-accent) bg-(--secondary-color) text-(--background-color) transition-all duration-200 md:inline-flex',
                 'motion-safe:animate-float [--float-distance:-8px]',
               )}
             >
@@ -158,11 +159,11 @@ export default function StreakMilestoneOverlay({
             </motion.p>
 */}
             {isStreakMilestoneAdEnabled && (
-              <div className='flex w-full max-w-3xl flex-col items-center gap-2'>
+              <div className='flex w-full min-w-0 max-w-3xl flex-col items-center gap-2'>
                 <p className='text-xs text-(--secondary-color)/80'>
                   (sponsored links)
                 </p>
-                <div className='w-full'>
+                <div className='w-full min-w-0 max-w-full'>
                   <AdSenseDisplay slot={STREAK_MILESTONE_AD_SLOT} />
                 </div>
               </div>

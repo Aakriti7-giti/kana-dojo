@@ -37,11 +37,11 @@ export default function AdSenseDisplay({
 
   return (
     <ins
-      className={`adsbygoogle block w-full ${className ?? ''}`}
-      style={{ display: 'block' }}
+      className={`adsbygoogle block w-full min-w-0 max-w-full ${className ?? ''}`}
+      style={{ display: 'block', width: '100%', maxWidth: '100%' }}
       data-ad-client={ADSENSE_CLIENT_ID}
       data-ad-slot={slot}
-      data-ad-format='auto'
+      data-ad-format='horizontal'
       data-full-width-responsive='true'
       aria-label='Advertisement'
     />

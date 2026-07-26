@@ -1,14 +1,13 @@
 'use client';
 
-import { lazy, Suspense, useEffect, type MouseEvent } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Flame } from 'lucide-react';
-import { useHasFinePointer } from '@/shared/hooks/generic/useHasFinePointer';
-import { useClick } from '@/shared/hooks/generic/useAudio';
 import { cn } from '@/shared/utils/utils';
 import { useThemePreferences } from '@/features/Preferences';
-import { suppressContinueKeyboardShortcuts } from '@/shared/utils/game/continueShortcutGuard';
+import { GameBottomBar } from '@/shared/ui-composite/Game/GameBottomBar';
+import BottomBar from '@/shared/ui-composite/layout/BottomBar';
 
 const Decorations = lazy(
   () => import('@/shared/ui-composite/Decorations/Decorations'),
@@ -68,52 +67,7 @@ export default function StreakMilestoneOverlay({
   milestone,
   onDismiss,
 }: StreakMilestoneOverlayProps) {
-  const hasFinePointer = useHasFinePointer();
-  const { playClick } = useClick();
   const { isGlassMode } = useThemePreferences();
-
-  useEffect(() => {
-    if (!milestone) return;
-
-    const absorbKeyboardEvent = (event: KeyboardEvent) => {
-      event.preventDefault();
-      event.stopPropagation();
-      event.stopImmediatePropagation();
-    };
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      absorbKeyboardEvent(event);
-      suppressContinueKeyboardShortcuts();
-      playClick();
-      onDismiss();
-    };
-
-    const handleKeyUp = (event: KeyboardEvent) => {
-      absorbKeyboardEvent(event);
-    };
-
-    const handleKeyPress = (event: KeyboardEvent) => {
-      absorbKeyboardEvent(event);
-    };
-
-    window.addEventListener('keydown', handleKeyDown, true);
-    window.addEventListener('keyup', handleKeyUp, true);
-    window.addEventListener('keypress', handleKeyPress, true);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown, true);
-      window.removeEventListener('keyup', handleKeyUp, true);
-      window.removeEventListener('keypress', handleKeyPress, true);
-    };
-  }, [milestone, onDismiss, playClick]);
-
-  const handleDismiss = (event: MouseEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    suppressContinueKeyboardShortcuts();
-    playClick();
-    onDismiss();
-  };
 
   useEffect(() => {
     if (!milestone) return;
@@ -149,7 +103,6 @@ export default function StreakMilestoneOverlay({
           animate='visible'
           exit='exit'
           className='fixed inset-0 z-70 flex h-full w-full items-center justify-center bg-(--background-color)'
-          onClick={handleDismiss}
           role='dialog'
           aria-modal='true'
           aria-label={`${milestone} in a row`}
@@ -171,7 +124,7 @@ export default function StreakMilestoneOverlay({
             variants={contentVariants}
             initial='hidden'
             animate='visible'
-            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 text-center select-none'
+            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-28 text-center select-none sm:pb-24'
           >
             <motion.button
               variants={itemVariants}
@@ -198,13 +151,22 @@ export default function StreakMilestoneOverlay({
               {message}
             </motion.p>
 */}
-            <motion.p
+            {/* <motion.p
               variants={itemVariants}
               className='text-sm text-(--secondary-color)/80'
             >
-              ({hasFinePointer ? 'click' : 'tap'} to continue)
-            </motion.p>
+              (use Continue to resume)
+            </motion.p> */}
           </motion.div>
+          <GameBottomBar
+            state='check'
+            canCheck={true}
+            feedbackContent={null}
+            actionLabel='continue'
+            onAction={onDismiss}
+            className='z-[80]'
+          />
+          <BottomBar />
         </motion.div>
       )}
     </AnimatePresence>

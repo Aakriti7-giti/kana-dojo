@@ -6,8 +6,14 @@ import confetti from 'canvas-confetti';
 import { Flame } from 'lucide-react';
 import { cn } from '@/shared/utils/utils';
 import { useThemePreferences } from '@/features/Preferences';
+import AdSenseDisplay from '@/shared/ui-composite/Ads/AdSenseDisplay';
 import { GameBottomBar } from '@/shared/ui-composite/Game/GameBottomBar';
 import BottomBar from '@/shared/ui-composite/layout/BottomBar';
+
+const STREAK_MILESTONE_AD_SLOT = '2642983933';
+const isStreakMilestoneAdEnabled =
+  process.env.NODE_ENV === 'production' &&
+  process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
 
 const Decorations = lazy(
   () => import('@/shared/ui-composite/Decorations/Decorations'),
@@ -124,7 +130,7 @@ export default function StreakMilestoneOverlay({
             variants={contentVariants}
             initial='hidden'
             animate='visible'
-            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-28 text-center select-none sm:pb-24'
+            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-56 text-center select-none sm:pb-48'
           >
             <motion.button
               variants={itemVariants}
@@ -151,18 +157,22 @@ export default function StreakMilestoneOverlay({
               {message}
             </motion.p>
 */}
-            {/* <motion.p
-              variants={itemVariants}
-              className='text-sm text-(--secondary-color)/80'
-            >
-              (use Continue to resume)
-            </motion.p> */}
+            {isStreakMilestoneAdEnabled && (
+              <div className='flex w-full max-w-3xl flex-col items-center gap-2'>
+                <p className='text-xs text-(--secondary-color)/80'>
+                  (sponsored links)
+                </p>
+                <div className='w-full'>
+                  <AdSenseDisplay slot={STREAK_MILESTONE_AD_SLOT} />
+                </div>
+              </div>
+            )}
           </motion.div>
           <GameBottomBar
             state='check'
             canCheck={true}
             feedbackContent={null}
-            actionLabel='continue'
+            actionLabel='skip'
             onAction={onDismiss}
           />
           <BottomBar />

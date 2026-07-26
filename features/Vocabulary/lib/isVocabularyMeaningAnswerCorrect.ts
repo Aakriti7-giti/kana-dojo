@@ -7,7 +7,7 @@ const normalize = (value: string): string =>
 export const isVocabularyMeaningAnswerCorrect = (
   vocabulary: IVocabObj,
   answer: string,
-  isReverse: boolean,
+  isReverse: boolean | undefined,
 ): boolean => {
   const normalizedAnswer = normalize(answer);
   if (!normalizedAnswer) return false;

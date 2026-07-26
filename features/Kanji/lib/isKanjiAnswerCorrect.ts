@@ -9,7 +9,7 @@ const normalizeReading = (value: string): string =>
 export const isKanjiAnswerCorrect = (
   kanji: IKanjiObj,
   answer: string,
-  isReverse: boolean,
+  isReverse: boolean | undefined,
 ): boolean => {
   const normalizedAnswer = normalize(answer);
   if (!normalizedAnswer) return false;

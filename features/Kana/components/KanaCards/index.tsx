@@ -1,6 +1,7 @@
 'use client';
 import { Fragment, useMemo, useState } from 'react';
 import clsx from 'clsx';
+import { useMediaQuery } from 'react-responsive';
 import Subset from './Subset';
 import KanaRowCard from './KanaRowCard';
 import KanaRowAdvertisementCard from './KanaRowAdvertisementCard';
@@ -213,10 +214,16 @@ const KanaCards = ({
     return cards;
   }, [filteredSubsets]);
 
-  const mediumScreenAdCount =
-    allKanaRowCards.length > 0 ? (2 - (allKanaRowCards.length % 2)) % 2 : 0;
-  const largeScreenAdCount =
-    allKanaRowCards.length > 0 ? (3 - (allKanaRowCards.length % 3)) % 3 : 0;
+  const isMediumScreen = useMediaQuery({ minWidth: 768 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1536 });
+  const gridColumnCount = isLargeScreen ? 3 : isMediumScreen ? 2 : 1;
+  const advertisementCount =
+    allKanaRowCards.length === 0
+      ? 0
+      : gridColumnCount === 1
+        ? 1
+        : (gridColumnCount - (allKanaRowCards.length % gridColumnCount)) %
+          gridColumnCount;
 
   if (USE_NEW_KANA_ROW_DESIGN) {
     if (viewMode === 'full') {
@@ -230,24 +237,10 @@ const KanaCards = ({
                 globalIndex={card.globalIndex}
               />
             ))}
-            {allKanaRowCards.length > 0 && (
+            {Array.from({ length: advertisementCount }, (_, index) => (
               <KanaRowAdvertisementCard
+                key={`${gridColumnCount}-column-ad-${index}`}
                 slot={KANA_ROW_AD_SLOT}
-                className='md:hidden'
-              />
-            )}
-            {Array.from({ length: mediumScreenAdCount }, (_, index) => (
-              <KanaRowAdvertisementCard
-                key={`medium-ad-${index}`}
-                slot={KANA_ROW_AD_SLOT}
-                className='hidden md:flex 2xl:hidden'
-              />
-            ))}
-            {Array.from({ length: largeScreenAdCount }, (_, index) => (
-              <KanaRowAdvertisementCard
-                key={`large-ad-${index}`}
-                slot={KANA_ROW_AD_SLOT}
-                className='hidden 2xl:flex'
               />
             ))}
           </div>

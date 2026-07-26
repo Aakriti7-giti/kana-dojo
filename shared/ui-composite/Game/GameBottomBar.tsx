@@ -54,7 +54,7 @@ export const GameBottomBar = ({
   const showRetryButton = isWrong && !hideRetry;
   const showNextButton =
     actionLabel === 'next' ||
-    actionLabel === 'continue' ||
+    actionLabel === 'skip' ||
     showContinue ||
     (isWrong && hideRetry);
 

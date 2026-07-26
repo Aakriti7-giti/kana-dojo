@@ -6,6 +6,7 @@ import confetti from 'canvas-confetti';
 import { Flame } from 'lucide-react';
 import { cn } from '@/shared/utils/utils';
 import { useThemePreferences } from '@/features/Preferences';
+import { useClick } from '@/shared/hooks/generic/useAudio';
 import AdSenseDisplay from '@/shared/ui-composite/Ads/AdSenseDisplay';
 import { GameBottomBar } from '@/shared/ui-composite/Game/GameBottomBar';
 import BottomBar from '@/shared/ui-composite/layout/BottomBar';
@@ -13,6 +14,7 @@ import { suppressContinueKeyboardShortcuts } from '@/shared/utils/game/continueS
 
 const STREAK_MILESTONE_AD_SLOT = '2642983933';
 const ENABLE_STREAK_MILESTONE_DECORATIONS = true;
+const ENABLE_STREAK_MILESTONE_KEYBOARD_SHORTCUTS = false;
 const isStreakMilestoneAdEnabled =
   process.env.NODE_ENV === 'production' &&
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
@@ -76,10 +78,11 @@ export default function StreakMilestoneOverlay({
   onDismiss,
 }: StreakMilestoneOverlayProps) {
   const { isGlassMode } = useThemePreferences();
+  const { playClick } = useClick();
   const skipButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (!milestone) return;
+    if (!ENABLE_STREAK_MILESTONE_KEYBOARD_SHORTCUTS || !milestone) return;
 
     const isSkipShortcut = (event: KeyboardEvent) =>
       event.key === 'Enter' || event.code === 'Space' || event.key === ' ';
@@ -112,6 +115,11 @@ export default function StreakMilestoneOverlay({
       window.removeEventListener('keypress', absorbShortcut, true);
     };
   }, [milestone]);
+
+  const handleDismiss = () => {
+    playClick();
+    onDismiss();
+  };
 
   useEffect(() => {
     if (!milestone) return;
@@ -168,7 +176,7 @@ export default function StreakMilestoneOverlay({
             variants={contentVariants}
             initial='hidden'
             animate='visible'
-            className='mx-auto flex w-full min-w-0 max-w-4xl flex-col items-center gap-5 px-6 pb-44 text-center select-none sm:pb-48'
+            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-48 text-center select-none'
           >
             <motion.button
               variants={itemVariants}
@@ -196,11 +204,11 @@ export default function StreakMilestoneOverlay({
             </motion.p>
 */}
             {isStreakMilestoneAdEnabled && (
-              <div className='flex w-full min-w-0 max-w-3xl flex-col items-center gap-2'>
+              <div className='flex w-full max-w-3xl flex-col items-center gap-2'>
                 <p className='text-xs text-(--secondary-color)/80'>
                   (sponsored link)
                 </p>
-                <div className='w-full min-w-0 max-w-full'>
+                <div className='w-full'>
                   <AdSenseDisplay slot={STREAK_MILESTONE_AD_SLOT} />
                 </div>
               </div>
@@ -211,7 +219,7 @@ export default function StreakMilestoneOverlay({
             canCheck={true}
             feedbackContent={null}
             actionLabel='skip'
-            onAction={onDismiss}
+            onAction={handleDismiss}
             buttonRef={skipButtonRef}
           />
           <BottomBar />

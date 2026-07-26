@@ -11,7 +11,7 @@ import { GameBottomBar } from '@/shared/ui-composite/Game/GameBottomBar';
 import BottomBar from '@/shared/ui-composite/layout/BottomBar';
 
 const STREAK_MILESTONE_AD_SLOT = '2642983933';
-const ENABLE_STREAK_MILESTONE_DECORATIONS = false;
+const ENABLE_STREAK_MILESTONE_DECORATIONS = true;
 const isStreakMilestoneAdEnabled =
   process.env.NODE_ENV === 'production' &&
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';

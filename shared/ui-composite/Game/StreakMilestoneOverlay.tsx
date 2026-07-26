@@ -176,7 +176,7 @@ export default function StreakMilestoneOverlay({
             variants={contentVariants}
             initial='hidden'
             animate='visible'
-            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-48 text-center select-none'
+            className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-28 text-center select-none'
           >
             <motion.button
               variants={itemVariants}

@@ -9,7 +9,7 @@ import AdSenseDisplay from '@/shared/ui-composite/Ads/AdSenseDisplay';
 import { ActionButton } from '@/shared/ui/components/ActionButton';
 import BottomBar from '@/shared/ui-composite/layout/BottomBar';
 
-const TRANSITION_AD_SLOT = '2642983933';
+const TRANSITION_AD_SLOT = '5452714175';
 const ENABLE_TRANSITION_AD_DECORATIONS = true;
 
 const Decorations = lazy(

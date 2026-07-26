@@ -212,7 +212,7 @@ export const GameBottomBar = ({
                 !showRetryButton &&
                 'cursor-default opacity-60',
               (canCheck || showNextButton) &&
-                'animate-float [--float-distance:-2.5px]',
+                'animate-float [--float-distance:-2px]',
             )}
             onClick={onAction}
           >

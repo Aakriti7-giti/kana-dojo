@@ -131,7 +131,7 @@
     "dont": "現金を投げるように渡す",
     "note": "丁寧で非接触な受け渡し。",
     "id": 15,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

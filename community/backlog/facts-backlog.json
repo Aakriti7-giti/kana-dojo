@@ -1382,7 +1382,7 @@
   {
     "id": 231,
     "fact": "Japan has a tradition of seasonal winds called 'kaze no tayori' (風の便り), where changes in nature signal the arrival of a festival or harvest.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

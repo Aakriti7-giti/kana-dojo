@@ -697,16 +697,16 @@
     "Nagoya",
     "Sendai"
   ],
-  "correctIndex": 0
-},
-{
-  "question": "Which Japanese city is famous for its street food district, Dotonbori?",
+  "correctIndex": 1
+  },
+  {
+  "question": "Which Japanese city is known for its historic wooden district, Gion? (Community variation 29)",
   "difficulty": "hard",
   "answers": [
-    "Osaka",
-    "Niigata",
-    "Kagoshima",
-    "Takayama"
+    "Kyoto",
+    "Yokohama",
+    "Nagoya",
+    "Sendai"
   ],
   "correctIndex": 0
 }

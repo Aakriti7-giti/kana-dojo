@@ -11,6 +11,7 @@ import AdSenseDisplay from '@/shared/ui-composite/Ads/AdSenseDisplay';
 import { GameBottomBar } from '@/shared/ui-composite/Game/GameBottomBar';
 import BottomBar from '@/shared/ui-composite/layout/BottomBar';
 import { suppressContinueKeyboardShortcuts } from '@/shared/utils/game/continueShortcutGuard';
+import { ENABLE_EVERY_QUESTION_AD_OVERLAY } from '@/shared/utils/game/streakMilestones';
 
 const STREAK_MILESTONE_AD_SLOT = '2642983933';
 const ENABLE_STREAK_MILESTONE_DECORATIONS = true;
@@ -157,7 +158,11 @@ export default function StreakMilestoneOverlay({
           className='fixed inset-0 z-70 flex h-full w-full items-center justify-center bg-(--background-color)'
           role='dialog'
           aria-modal='true'
-          aria-label={`${milestone} in a row`}
+          aria-label={
+            ENABLE_EVERY_QUESTION_AD_OVERLAY
+              ? 'Advertisement'
+              : `${milestone} in a row`
+          }
         >
           {ENABLE_STREAK_MILESTONE_DECORATIONS && !isGlassMode && (
             <div className='absolute inset-0 -z-10'>
@@ -178,21 +183,25 @@ export default function StreakMilestoneOverlay({
             animate='visible'
             className='mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-6 pb-28 text-center select-none'
           >
-            <motion.button
-              variants={itemVariants}
-              className={cn(
-                'hidden h-28 w-28 items-center justify-center rounded-4xl border-b-20 border-(--secondary-color-accent) bg-(--secondary-color) text-(--background-color) transition-all duration-200 md:inline-flex',
-                'motion-safe:animate-float [--float-distance:-8px]',
-              )}
-            >
-              <Flame className='h-16 w-16' strokeWidth={2.5} />
-            </motion.button>
+            {!ENABLE_EVERY_QUESTION_AD_OVERLAY && (
+              <motion.button
+                variants={itemVariants}
+                className={cn(
+                  'hidden h-28 w-28 items-center justify-center rounded-4xl border-b-20 border-(--secondary-color-accent) bg-(--secondary-color) text-(--background-color) transition-all duration-200 md:inline-flex',
+                  'motion-safe:animate-float [--float-distance:-8px]',
+                )}
+              >
+                <Flame className='h-16 w-16' strokeWidth={2.5} />
+              </motion.button>
+            )}
 
             <motion.h2
               variants={itemVariants}
               className='text-4xl font-semibold tracking-tighter text-(--main-color) sm:text-5xl'
             >
-              {milestone} in a row!
+              {ENABLE_EVERY_QUESTION_AD_OVERLAY
+                ? 'Advertisement'
+                : `${milestone} in a row!`}
             </motion.h2>
 
             {/*
@@ -205,9 +214,11 @@ export default function StreakMilestoneOverlay({
 */}
             {isStreakMilestoneAdEnabled && (
               <div className='flex w-full max-w-3xl flex-col items-center gap-2'>
-                <p className='text-xs text-(--secondary-color) font-medium tracking-wide uppercase'>
-                  Advertisement
-                </p>
+                {!ENABLE_EVERY_QUESTION_AD_OVERLAY && (
+                  <p className='text-xs font-medium tracking-wide text-(--secondary-color) uppercase'>
+                    Advertisement
+                  </p>
+                )}
                 <div className='w-full'>
                   <AdSenseDisplay slot={STREAK_MILESTONE_AD_SLOT} />
                 </div>

@@ -175,6 +175,8 @@ const VocabMCQ = ({ selectedWordObjs, isHidden }: VocabMCQProps) => {
     correctWordObj as IVocabObj,
   );
 
+  const isProcessingRef = useRef(false);
+
   // What to display as the question
   const displayChar = isReverse ? correctWordObj?.meanings[0] : correctChar;
 
@@ -224,6 +226,7 @@ const VocabMCQ = ({ selectedWordObjs, isHidden }: VocabMCQProps) => {
 
   // Update shuffled options when correctChar or isReverse changes
   useEffect(() => {
+    isProcessingRef.current = false;
     if (!hasWords) return;
     setShuffledOptions(
       [targetChar ?? '', ...getIncorrectOptions()].sort(
@@ -252,6 +255,9 @@ const VocabMCQ = ({ selectedWordObjs, isHidden }: VocabMCQProps) => {
   }, [hasWords, shuffledOptions.length]);
 
   const handleOptionClick = (selectedOption: string) => {
+    if (isProcessingRef.current) return;
+    isProcessingRef.current = true;
+
     if (selectedOption === targetChar) {
       setDisplayAnswerSummary(true);
       handleCorrectAnswer();

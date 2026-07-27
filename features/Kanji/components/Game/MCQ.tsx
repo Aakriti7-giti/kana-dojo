@@ -163,6 +163,8 @@ const KanjiMCQ = ({ selectedKanjiObjs, isHidden }: KanjiMCQProps) => {
     correctKanjiObj as IKanjiObj,
   );
 
+  const isProcessingRef = useRef(false);
+
   // What to display as the question
   const displayChar = isReverse ? correctKanjiObj?.meanings[0] : correctChar;
 
@@ -210,6 +212,7 @@ const KanjiMCQ = ({ selectedKanjiObjs, isHidden }: KanjiMCQProps) => {
 
   // Update shuffled options when correctChar or isReverse changes
   useEffect(() => {
+    isProcessingRef.current = false;
     setShuffledOptions(
       [targetChar, ...getIncorrectOptions()].sort(
         () => random.real(0, 1) - 0.5,
@@ -241,6 +244,9 @@ const KanjiMCQ = ({ selectedKanjiObjs, isHidden }: KanjiMCQProps) => {
 
   // Handle tiles mode correct answer
   const handleOptionClick = (selectedOption: string) => {
+    if (isProcessingRef.current) return;
+    isProcessingRef.current = true;
+
     if (selectedOption === targetChar) {
       setDisplayAnswerSummary(true);
       handleCorrectAnswer();

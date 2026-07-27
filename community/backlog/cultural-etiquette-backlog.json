@@ -815,7 +815,7 @@
     "dont": "値段を強調する",
     "note": "謙遜表現が好まれる。",
     "id": 91,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

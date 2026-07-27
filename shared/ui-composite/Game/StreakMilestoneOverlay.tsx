@@ -205,8 +205,8 @@ export default function StreakMilestoneOverlay({
 */}
             {isStreakMilestoneAdEnabled && (
               <div className='flex w-full max-w-3xl flex-col items-center gap-2'>
-                <p className='text-xs text-(--secondary-color)/80'>
-                  (sponsored link)
+                <p className='text-xs text-(--secondary-color) font-medium tracking-wide uppercase'>
+                  Advertisement
                 </p>
                 <div className='w-full'>
                   <AdSenseDisplay slot={STREAK_MILESTONE_AD_SLOT} />

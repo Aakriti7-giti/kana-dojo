@@ -8,7 +8,7 @@ interface KanaRowAdvertisementCardProps {
 
 const KanaRowAdvertisementCard = ({ slot }: KanaRowAdvertisementCardProps) => (
   <section
-    className='transition-250 flex h-full flex-col items-center justify-center rounded-3xl border-0 border-(--border-color) bg-(--card-color) p-4'
+    className='transition-250 flex aspect-square flex-col items-center justify-center rounded-3xl border-0 border-(--border-color) bg-(--card-color) p-4'
     aria-label='Advertisement'
   >
     <p className='mb-3 text-xs font-medium tracking-wide text-(--secondary-color) uppercase'>

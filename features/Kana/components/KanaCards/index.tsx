@@ -229,7 +229,7 @@ const KanaCards = ({
     if (viewMode === 'full') {
       return (
         <div className='flex w-full flex-col gap-4'>
-          <div className='grid w-full auto-rows-fr grid-cols-1 items-stretch gap-4 md:grid-cols-2 2xl:grid-cols-3'>
+          <div className='grid w-full grid-cols-1 items-start gap-4 md:grid-cols-2 2xl:grid-cols-3'>
             {allKanaRowCards.map(card => (
               <KanaRowCard
                 key={`${card.globalIndex}-${card.kanaGroup.groupName}`}

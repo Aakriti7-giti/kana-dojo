@@ -236,6 +236,13 @@ const VocabMCQ = ({ selectedWordObjs, isHidden }: VocabMCQProps) => {
     setWrongSelectedAnswers([]);
   }, [correctChar, hasWords, isReverse, quizType]);
 
+  // A wrong answer keeps the current prompt on screen. Release the synchronous
+  // event lock only after its disabled-button state has committed, so another
+  // available option can be selected without accepting duplicate rapid input.
+  useEffect(() => {
+    isProcessingRef.current = false;
+  }, [wrongSelectedAnswers]);
+
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {

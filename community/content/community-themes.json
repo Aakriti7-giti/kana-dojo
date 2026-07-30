@@ -364,5 +364,29 @@
     "backgroundColor": "oklch(94.0% 0.012 250.0 / 1)",
     "mainColor": "oklch(50.0% 0.145 30.0 / 1)",
     "secondaryColor": "oklch(40.0% 0.110 250.0 / 1)"
+  },
+  {
+    "id": "edo-vintage",
+    "backgroundColor": "oklch(24.0% 0.028 65.0 / 1)",
+    "mainColor": "oklch(72.0% 0.085 70.0 / 1)",
+    "secondaryColor": "oklch(60.0% 0.065 55.0 / 1)"
+  },
+  {
+    "id": "sakura-storm",
+    "backgroundColor": "oklch(90.0% 0.032 340.0 / 1)",
+    "mainColor": "oklch(70.0% 0.185 345.0 / 1)",
+    "secondaryColor": "oklch(55.0% 0.145 350.0 / 1)"
+  },
+  {
+    "id": "quiet-library",
+    "backgroundColor": "oklch(92.0% 0.012 90.0 / 1)",
+    "mainColor": "oklch(35.0% 0.085 255.0 / 1)",
+    "secondaryColor": "oklch(55.0% 0.055 65.0 / 1)"
+  },
+  {
+    "id": "origami-crane",
+    "backgroundColor": "oklch(95.0% 0.008 90.0 / 1)",
+    "mainColor": "oklch(55.0% 0.220 25.0 / 1)",
+    "secondaryColor": "oklch(45.0% 0.150 20.0 / 1)"
   }
 ]

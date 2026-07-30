@@ -382,5 +382,11 @@
     "backgroundColor": "oklch(92.0% 0.012 90.0 / 1)",
     "mainColor": "oklch(35.0% 0.085 255.0 / 1)",
     "secondaryColor": "oklch(55.0% 0.055 65.0 / 1)"
+  },
+  {
+    "id": "origami-crane",
+    "backgroundColor": "oklch(95.0% 0.008 90.0 / 1)",
+    "mainColor": "oklch(55.0% 0.220 25.0 / 1)",
+    "secondaryColor": "oklch(45.0% 0.150 20.0 / 1)"
   }
 ]

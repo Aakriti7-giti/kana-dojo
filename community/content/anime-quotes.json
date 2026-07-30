@@ -524,17 +524,19 @@
     "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
     "character": "Yoshikage Kira"
   },
-  {
+
+{
     "japanese": "俺はガンダムだ！",
     "romaji": "Ore wa Gandamu da!",
     "english": "I am Gundam!(alt wording 25) (alt wording 77)",
     "anime": "Mobile Suit Gundam 00",
     "character": "Setsuna F. Seiei"
+  },
+  {
+    "japanese": "だが断る",
+    "romaji": "Daga kotowaru",
+    "english": "But I refuse. (alt wording 4)",
+    "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+    "character": "Rohan Kishibe"
   }
-  "japanese": "だが断る",
-  "romaji": "Daga kotowaru",
-  "english": "But I refuse. (alt wording 4)",
-  "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
-  "character": "Rohan Kishibe"
-}
 ]

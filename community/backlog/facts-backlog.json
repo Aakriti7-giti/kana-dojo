@@ -14,7 +14,7 @@
   {
     "id": 3,
     "fact": "Japanese blood types are believed to determine personality, similar to zodiac signs in the West. Type A is organized, B is creative, O is confident, and AB is rational.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

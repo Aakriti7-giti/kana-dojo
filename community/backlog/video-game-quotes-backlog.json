@@ -296,7 +296,7 @@
     "game": "Dragon Quest XI",
     "character": "Hero / party lines",
     "id": 30,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

@@ -248,8 +248,10 @@
       "Okayama"
     ],
     "correctIndex": 0,
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "SpaleRuby",
+    "completedPR": 26726
   },
   {
     "id": 19,

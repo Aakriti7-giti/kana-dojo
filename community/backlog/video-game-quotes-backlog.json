@@ -1046,8 +1046,10 @@
     "game": "Danganronpa series",
     "character": "Makoto Naegi",
     "id": 105,
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "KIRA-L001",
+    "completedPR": 26717
   },
   {
     "japanese": "覚悟はいいか？ 俺はできてる。",

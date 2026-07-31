@@ -14,10 +14,10 @@ const ENABLE_TRANSITION_AD_DECORATIONS = true;
 export type TransitionAdvertisementPlacement = 'before' | 'after';
 
 // Configure transition ads here: [], ['before'], ['after'], or ['before', 'after'].
-export const TRANSITION_AD_PLACEMENTS = [
+export const TRANSITION_AD_PLACEMENTS: readonly TransitionAdvertisementPlacement[] = [
   // 'before',
   // 'after',
-] as const satisfies readonly TransitionAdvertisementPlacement[];
+];
 
 export const isTransitionAdvertisementEnabled = (
   placement: TransitionAdvertisementPlacement,

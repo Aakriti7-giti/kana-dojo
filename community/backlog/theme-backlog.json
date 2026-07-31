@@ -464,8 +464,10 @@
     "backgroundColor": "oklch(20.0% 0.022 35.0 / 1)",
     "mainColor": "oklch(72.0% 0.065 75.0 / 1)",
     "secondaryColor": "oklch(60.0% 0.185 20.0 / 1)",
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "vianmangal",
+    "completedPR": 26667
   },
   {
     "id": "sakura-storm",

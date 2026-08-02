@@ -12,8 +12,10 @@
     "file": "docs/community-notes/contribution-notes-2.md",
     "position": "top",
     "text": "> Community note: this page intentionally accepts tiny formatting-safe edits.",
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "Garg-Pankaj29",
+    "completedPR": 26927
   },
   {
     "id": 3,

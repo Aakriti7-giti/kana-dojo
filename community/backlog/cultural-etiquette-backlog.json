@@ -788,7 +788,7 @@
     "dont": "タオルを湯船に入れる",
     "note": "共同浴場の基本ルール。",
     "id": 88,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

@@ -976,7 +976,7 @@
     "game": "The Legend of Zelda: Breath of the Wild (JP)",
     "character": "Revali",
     "id": 98,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

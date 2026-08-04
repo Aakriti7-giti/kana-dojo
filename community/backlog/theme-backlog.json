@@ -437,7 +437,9 @@
     "mainColor": "oklch(65.0% 0.025 270.0 / 1)",
     "secondaryColor": "oklch(55.0% 0.175 15.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": false,
+    "completedBy": "RawNuke",
+    "completedPR": 27228
   },
   {
     "id": "konbini-light",

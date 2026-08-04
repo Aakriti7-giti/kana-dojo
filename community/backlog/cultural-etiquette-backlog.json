@@ -788,8 +788,10 @@
     "dont": "タオルを湯船に入れる",
     "note": "共同浴場の基本ルール。",
     "id": 88,
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "hajar-benhadj",
+    "completedPR": 27121
   },
   {
     "situation": "会議 5",

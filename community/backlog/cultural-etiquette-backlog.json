@@ -86,7 +86,7 @@
     "dont": "割り込む",
     "note": "駅・店頭では順番厳守。",
     "id": 10,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -789,7 +789,7 @@
     "note": "共同浴場の基本ルール。",
     "id": 88,
     "issued": false,
-    "completed": false,
+    "completed": true,
     "completedBy": "hajar-benhadj",
     "completedPR": 27121
   },

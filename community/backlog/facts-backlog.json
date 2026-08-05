@@ -1820,7 +1820,7 @@
   {
     "id": 304,
     "fact": "Japan’s 'hanami' tradition often includes picnic mats, bento boxes, and seasonal sweets under the cherry trees.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

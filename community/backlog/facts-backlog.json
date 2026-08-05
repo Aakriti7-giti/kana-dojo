@@ -272,7 +272,7 @@
   {
     "id": 46,
     "fact": "Japan's Shibuya Crossing sees up to 3,000 people cross at once during peak times - making it the busiest pedestrian intersection in the world.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

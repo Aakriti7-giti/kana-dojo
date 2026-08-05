@@ -1106,7 +1106,7 @@
     "game": "Monster Hunter series",
     "character": "Guild Handler lines",
     "id": 111,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

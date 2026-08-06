@@ -165,7 +165,7 @@ const MainMenu = () => {
       )}
       <div
         className={clsx(
-          '3xl:w-2/5 flex w-full flex-col items-center gap-4 px-4 pb-16 max-md:pt-4 sm:w-3/4 md:justify-center lg:w-1/2',
+          '3xl:w-2/5 flex w-full flex-col self-center items-center gap-4 m-4 mb-8 max-md:pt-4 sm:w-3/4 md:justify-center lg:w-1/2',
           'z-50',
           !isGlassMode && 'opacity-90',
           expandDecorations && 'hidden',

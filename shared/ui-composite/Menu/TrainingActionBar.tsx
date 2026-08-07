@@ -7,7 +7,7 @@ import { useVocabSelection } from '@/features/Vocabulary';
 import { useInputPreferences } from '@/features/Preferences';
 import usePreferencesStore from '@/features/Preferences/store/usePreferencesStore';
 import { useClick } from '@/shared/hooks/generic/useAudio';
-import { Play, Zap, Swords } from 'lucide-react';
+import { Bolt, Play, Zap, Swords } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ModeSetupMenu from '@/shared/ui-composite/Menu/ModeSetupMenu';
 
@@ -69,6 +69,12 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
+  const startAutoLearning = () => {
+    document
+      .querySelector<HTMLButtonElement>('[data-auto-learning-dojo]')
+      ?.click();
+  };
+
   useEffect(() => {
     if (!hotkeysOn) return;
 
@@ -82,7 +88,11 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
 
       if (event.key === 'Enter' && isFilled) {
         event.preventDefault();
-        setShowGameModesModal(true);
+        if (showExperimentalModes) {
+          setShowGameModesModal(true);
+        } else {
+          startAutoLearning();
+        }
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -90,7 +100,7 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [hotkeysOn, isFilled]);
+  }, [hotkeysOn, isFilled, showExperimentalModes]);
 
   const showBlitz =
     currentDojo === 'kana' ||
@@ -315,6 +325,22 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
                   },
                 ]
               : []),
+            ...(!showExperimentalModes
+              ? [
+                  {
+                    id: 'custom' as const,
+                    label: 'Custom' as const,
+                    Icon: Bolt,
+                    iconClassName: 'fill-current',
+                    show: true,
+                    colorScheme: 'secondary' as const,
+                    onClick: () => {
+                      setGameModesMode('train');
+                      setShowGameModesModal(true);
+                    },
+                  },
+                ]
+              : []),
             {
               id: 'classic' as const,
               label: 'Go' as const,
@@ -323,8 +349,13 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
               show: true,
               colorScheme: 'primary' as const,
               onClick: () => {
-                setGameModesMode('train');
-                setShowGameModesModal(true);
+                if (showExperimentalModes) {
+                  setGameModesMode('train');
+                  setShowGameModesModal(true);
+                  return;
+                }
+
+                startAutoLearning();
               },
               ref: buttonRef,
             },
@@ -352,8 +383,12 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
                     // Mobile: fixed widths (25% for Blitz/Gauntlet, 50% for Classic), no x-padding
                     // Desktop (sm+): flex-based sizing with padding
                     id === 'classic'
-                      ? 'w-full sm:w-3/4 md:w-3/5 md:px-6 xl:w-1/2'
-                      : 'w-1/4 sm:w-auto sm:max-w-sm sm:flex-1 sm:px-6',
+                      ? showExperimentalModes
+                        ? 'w-full sm:w-3/4 md:w-3/5 md:px-6 xl:w-1/2'
+                        : 'w-1/2 md:w-3/5 md:px-6'
+                      : id === 'custom'
+                        ? 'w-1/2 sm:max-w-sm sm:flex-1 sm:px-6'
+                        : 'w-1/4 sm:w-auto sm:max-w-sm sm:flex-1 sm:px-6',
                     'rounded-3xl transition-colors duration-200',
                     'border-b-10',
                     'hover:cursor-pointer',
@@ -371,9 +406,11 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
                   }}
                 >
                   <Icon size={36} className={cn(iconClassName)} />
-                  {/* <span className='whitespace-nowrap text-lg font-medium sm:text-xl'>
-                        {label}
-                      </span> */}
+                  {id === 'custom' && (
+                    <span className='whitespace-nowrap text-lg font-medium sm:text-xl'>
+                      {label}
+                    </span>
+                  )}
                 </button>
               ),
             )}

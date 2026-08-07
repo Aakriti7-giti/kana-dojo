@@ -22,6 +22,7 @@ const AutoLearningButton = ({
 }: AutoLearningButtonProps) => (
   <div className={cn('w-full', className)}>
     <ActionButton
+      data-auto-learning-dojo
       onClick={onClick}
       disabled={isLoading}
       className='px-2 py-3 disabled:cursor-wait disabled:opacity-70'

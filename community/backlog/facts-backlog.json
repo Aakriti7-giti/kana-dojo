@@ -2,7 +2,7 @@
   {
     "id": 1,
     "fact": "Japan has a word 'kuchisabishii' (口寂しい) that literally means 'lonely mouth' - the feeling of eating when you're not hungry, just because your mouth wants something to do.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

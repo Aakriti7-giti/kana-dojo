@@ -959,7 +959,7 @@
     "dont": "参道の中央を歩く",
     "note": "中央は神様の通り道とされる。",
     "id": 107,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

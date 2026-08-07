@@ -426,7 +426,7 @@
     "game": "Tales of the Abyss",
     "character": "Luke fon Fabre",
     "id": 43,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

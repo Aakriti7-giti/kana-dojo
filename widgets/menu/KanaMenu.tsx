@@ -141,7 +141,7 @@ const KanaMenu = ({ filter = 'all' }: { filter?: KanaMenuFilter }) => {
         })),
       });
       setReviewCursor('kana', selection.nextReviewCursor);
-      router.push('/kana/train');
+      router.push('/kana/learn');
     } catch {
       setAutoLearningError(
         'Could not prepare your learning session. Try again.',

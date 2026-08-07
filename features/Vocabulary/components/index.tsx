@@ -285,7 +285,7 @@ const VocabCards = ({ showAutoLearning = false }: VocabCardsProps) => {
         })),
       });
       setReviewCursor('vocabulary', selection.nextReviewCursor);
-      router.push('/vocabulary/train');
+      router.push('/vocabulary/learn');
     } catch {
       setAutoLearningError('Could not load Vocabulary sets. Try again.');
       setIsAutoLearning(false);

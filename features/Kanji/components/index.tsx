@@ -249,7 +249,7 @@ const KanjiCards = ({ showAutoLearning = false }: KanjiCardsProps) => {
         })),
       });
       setReviewCursor('kanji', selection.nextReviewCursor);
-      router.push('/kanji/train');
+      router.push('/kanji/learn');
     } catch {
       setAutoLearningError('Could not load Kanji sets. Try again.');
       setIsAutoLearning(false);

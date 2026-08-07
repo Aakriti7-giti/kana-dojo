@@ -91,9 +91,8 @@ type LevelSetCardsProps<TLevel extends string, TItem> = {
   loadingText: string;
   activeSubunitRange: ActiveSubunitRange;
   collapseScopeKey: string;
-  initialCollections?: Partial<
-    Record<TLevel, LevelSetCardsCollection<TItem>>
-  >;
+  initialCollections?: Partial<Record<TLevel, LevelSetCardsCollection<TItem>>>;
+  learningAction?: React.ReactNode;
 };
 
 const INITIAL_ROWS = 5;
@@ -336,6 +335,7 @@ const LevelSetCards = <TLevel extends string, TItem>({
   activeSubunitRange,
   collapseScopeKey,
   initialCollections,
+  learningAction,
 }: LevelSetCardsProps<TLevel, TItem>) => {
   const { playClick } = useClick();
 
@@ -460,14 +460,17 @@ const LevelSetCards = <TLevel extends string, TItem>({
     if (sessionStorage.getItem(initializedKey) === 'true') return;
 
     const calculateMasteredRows = () => {
-      const masteredRows = allRows.reduce<number[]>((acc, rowSets, rowIndex) => {
-        const isRowMastered = rowSets.every(
-          set => Math.round(set.progress * 100) >= 100,
-        );
+      const masteredRows = allRows.reduce<number[]>(
+        (acc, rowSets, rowIndex) => {
+          const isRowMastered = rowSets.every(
+            set => Math.round(set.progress * 100) >= 100,
+          );
 
-        if (isRowMastered) acc.push(rowIndex);
-        return acc;
-      }, []);
+          if (isRowMastered) acc.push(rowIndex);
+          return acc;
+        },
+        [],
+      );
 
       if (masteredRows.length > 0) {
         setCollapsedRows(prev =>
@@ -494,12 +497,7 @@ const LevelSetCards = <TLevel extends string, TItem>({
     return () => {
       window.clearTimeout(timeoutId);
     };
-  }, [
-    allRows,
-    collapseScopeKey,
-    selectedCollection,
-    setCollapsedRows,
-  ]);
+  }, [allRows, collapseScopeKey, selectedCollection, setCollapsedRows]);
 
   const handleToggleSet = (setName: string) => {
     const set = setsTemp.find(s => s.name === setName);
@@ -567,6 +565,7 @@ const LevelSetCards = <TLevel extends string, TItem>({
 
   return (
     <div className='flex w-full flex-col gap-4'>
+      {learningAction}
       <ActionButton
         onClick={() => {
           playClick();

@@ -2,5 +2,6 @@ export {
   default,
   generateMetadata,
   generateStaticParams,
-  revalidate,
 } from '../train/page';
+
+export const revalidate = 3600;

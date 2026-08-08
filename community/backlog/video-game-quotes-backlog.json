@@ -236,7 +236,7 @@
     "game": "Steins;Gate: My Darling's Embrace",
     "character": "Rintaro Okabe",
     "id": 24,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

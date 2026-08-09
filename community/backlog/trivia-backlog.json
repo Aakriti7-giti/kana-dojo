@@ -1032,8 +1032,10 @@
       "Matsue"
     ],
     "correctIndex": 0,
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "cgkol2005",
+    "completedPR": 27781
   },
   {
     "id": 75,

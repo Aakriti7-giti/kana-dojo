@@ -590,7 +590,7 @@
   {
     "id": 99,
     "text": "\"〜なくてもいい\" means \"don't have to\" and lifts an obligation. (practice variation 14)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

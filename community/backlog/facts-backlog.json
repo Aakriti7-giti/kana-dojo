@@ -944,7 +944,7 @@
   {
     "id": 158,
     "fact": "Japan has 'melon bread' (melonpan) that contains no melon - it's named for the cookie crust pattern resembling a melon.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

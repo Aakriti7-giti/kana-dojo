@@ -92,9 +92,13 @@ export default function StreakMilestoneOverlay({
 
     // Move keyboard focus to Skip so Enter targets this dialog, not the
     // type-mode "next" button still mounted underneath.
-    skipButtonRef.current?.focus();
+    const focusSkip = () => skipButtonRef.current?.focus();
+    focusSkip();
+    const focusFrame = requestAnimationFrame(focusSkip);
 
-    if (!ENABLE_STREAK_MILESTONE_KEYBOARD_SHORTCUTS) return;
+    if (!ENABLE_STREAK_MILESTONE_KEYBOARD_SHORTCUTS) {
+      return () => cancelAnimationFrame(focusFrame);
+    }
 
     const isSkipShortcut = (event: KeyboardEvent) =>
       event.key === 'Enter' || event.code === 'Space' || event.key === ' ';
@@ -123,6 +127,7 @@ export default function StreakMilestoneOverlay({
     window.addEventListener('keypress', absorbShortcut, true);
 
     return () => {
+      cancelAnimationFrame(focusFrame);
       window.removeEventListener('keydown', handleKeyDown, true);
       window.removeEventListener('keyup', absorbShortcut, true);
       window.removeEventListener('keypress', absorbShortcut, true);

@@ -26,7 +26,7 @@
   {
     "id": 5,
     "text": "\"〜てはいけません\" means \"must not\" and is used for prohibitions.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -44,7 +44,7 @@
   {
     "id": 8,
     "text": "\"〜てしまう\" can show completion or regret about an action.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -140,7 +140,7 @@
   {
     "id": 24,
     "text": "\"〜ので\" gives a reason in a polite or softer way than \"から\".",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -183,7 +183,7 @@
     "id": 31,
     "text": "\"〜ところ\" refers to a point in time, like \"about to\", \"in the middle of\", or \"just finished\".",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 32,
@@ -212,13 +212,13 @@
   {
     "id": 36,
     "text": "\"〜ことにする\" expresses a decision, like \"decide to\".",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 37,
     "text": "\"〜ことになる\" indicates something was decided (by others or circumstances).",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -249,7 +249,7 @@
     "id": 42,
     "text": "\"〜ことがある\" means \"sometimes\" when talking about habitual actions.",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 43,
@@ -273,7 +273,7 @@
     "id": 46,
     "text": "\"〜にする\" means \"decide on\" a choice or selection.",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 47,
@@ -285,7 +285,7 @@
     "id": 48,
     "text": "\"〜そうだ\" can indicate appearance, like \"it looks like\".",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 49,
@@ -309,7 +309,7 @@
     "id": 52,
     "text": "\"〜おかげで\" expresses gratitude for a cause, \"thanks to\".",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 53,
@@ -411,7 +411,7 @@
     "id": 69,
     "text": "\"〜ものの\" means \"although...\" with contrast.",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 70,
@@ -447,7 +447,7 @@
     "id": 75,
     "text": "\"〜ことにする\" means \"decide to...\".",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 76,
@@ -495,7 +495,7 @@
     "id": 83,
     "text": "\"〜にしたがって\" means \"as / in accordance with...\".",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 84,
@@ -560,7 +560,7 @@
   {
     "id": 94,
     "text": "\"〜そうです\" can report hearsay (\"I heard that...\"). (practice variation 9)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -584,13 +584,13 @@
   {
     "id": 98,
     "text": "\"〜なければならない\" means \"must\" or \"have to\" do something. (practice variation 13)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
     "id": 99,
     "text": "\"〜なくてもいい\" means \"don't have to\" and lifts an obligation. (practice variation 14)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -662,7 +662,7 @@
   {
     "id": 111,
     "text": "\"〜まま\" means \"as is\" or \"unchanged\". (practice variation 26)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -728,7 +728,7 @@
   {
     "id": 122,
     "text": "\"〜ことになる\" indicates something was decided (by others or circumstances). (practice variation 37)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -794,7 +794,7 @@
   {
     "id": 133,
     "text": "\"〜そうだ\" can indicate appearance, like \"it looks like\". (practice variation 48)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -824,7 +824,7 @@
   {
     "id": 138,
     "text": "\"〜せいで\" indicates a negative cause, \"because of\". (practice variation 53)",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -836,7 +836,7 @@
   {
     "id": 140,
     "text": "\"〜ば〜ほど\" means \"the more... the more...\". (practice variation 55)",
-    "issued": false,
+    "issued": true,
     "completed": false
   }
 ]

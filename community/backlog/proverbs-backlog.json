@@ -24,7 +24,7 @@
     "english": "A frog in a well does not know the great sea",
     "meaning": "Those with limited experience cannot understand the bigger picture",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 4,
@@ -293,7 +293,7 @@
     "romaji": "Nasake wa hito no tame narazu",
     "english": "Kindness is not for others",
     "meaning": "A good deed returns to you",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -312,7 +312,7 @@
     "english": "A bee on a crying face",
     "meaning": "Misfortune never comes alone",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 36,
@@ -375,7 +375,7 @@
     "english": "Fame from a mistake",
     "meaning": "A lucky break that comes from an error",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 44,
@@ -447,7 +447,7 @@
     "english": "Giving birth is easier than worrying",
     "meaning": "Doing is often easier than worrying",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 51,
@@ -537,7 +537,7 @@
     "english": "Among flowers, the cherry blossom; among men, the warrior",
     "meaning": "The best of each kind",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 61,
@@ -564,7 +564,7 @@
     "english": "A frog in a well does not know the great sea",
     "meaning": "Limited experience limits perspective",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 64,
@@ -591,7 +591,7 @@
     "english": "Travel needs companions; life needs kindness",
     "meaning": "Relationships and compassion matter",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 67,
@@ -618,7 +618,7 @@
     "english": "Good medicine tastes bitter",
     "meaning": "Helpful advice can be hard to hear",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 70,
@@ -717,7 +717,7 @@
     "english": "The moon and a turtle",
     "meaning": "Vast difference; not comparable",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 81,
@@ -752,7 +752,7 @@
     "romaji": "Yabu wo tsutsuite hebi wo dasu",
     "english": "Poke the bush and bring out a snake",
     "meaning": "Stir up trouble unnecessarily",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -807,7 +807,7 @@
     "english": "Continuation is power",
     "meaning": "Consistency leads to strength",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 91,
@@ -852,7 +852,7 @@
     "english": "Sometimes losing is winning",
     "meaning": "Conceding can be the best outcome",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 96,
@@ -1103,7 +1103,7 @@
     "romaji": "Koukai saki ni tatazu",
     "english": "Regret does not stand before",
     "meaning": "It's too late for regrets",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1122,7 +1122,7 @@
     "english": "A bee on a crying face",
     "meaning": "Misfortune never comes alone",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 126,
@@ -1131,7 +1131,7 @@
     "english": "I'd even borrow a cat's paw",
     "meaning": "Extremely busy",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 127,
@@ -1257,7 +1257,7 @@
     "english": "A rice cake falls from the shelf",
     "meaning": "Unexpected good luck",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 141,
@@ -1383,7 +1383,7 @@
     "english": "A bee on a crying face",
     "meaning": "Misfortune piles up",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 155,
@@ -1473,7 +1473,7 @@
     "english": "A journey of a thousand miles begins with one step",
     "meaning": "Start small",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 165,
@@ -1481,7 +1481,7 @@
     "romaji": "Hayaoki wa sanmon no toku",
     "english": "Early rising brings three coins of benefit",
     "meaning": "Wake early for advantage",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1554,7 +1554,7 @@
     "english": "Put care into care",
     "meaning": "Double-check everything",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 174,

@@ -46,7 +46,7 @@
     "game": "Danganronpa series",
     "character": "Makoto Naegi",
     "id": 5,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -106,7 +106,7 @@
     "game": "Monster Hunter series",
     "character": "Guild Handler lines",
     "id": 11,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -126,7 +126,7 @@
     "game": "Final Fantasy Type-0",
     "character": "Class Zero",
     "id": 13,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -176,7 +176,7 @@
     "game": "The Legend of Zelda: Breath of the Wild (JP)",
     "character": "Revali",
     "id": 18,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -236,7 +236,7 @@
     "game": "Steins;Gate: My Darling's Embrace",
     "character": "Rintaro Okabe",
     "id": 24,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -276,7 +276,7 @@
     "game": "Kingdom Hearts series (JP dub)",
     "character": "Sora",
     "id": 28,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -286,7 +286,7 @@
     "game": "Street Fighter series",
     "character": "Ryu",
     "id": 29,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -336,7 +336,7 @@
     "game": "Yakuza: Like a Dragon",
     "character": "Ichiban Kasuga",
     "id": 34,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -416,7 +416,7 @@
     "game": "Fate/stay night [Realta Nua]",
     "character": "Saber",
     "id": 42,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -536,7 +536,7 @@
     "game": "Yakuza: Like a Dragon",
     "character": "Ichiban Kasuga",
     "id": 54,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -626,7 +626,7 @@
     "game": "Tales of the Abyss",
     "character": "Luke fon Fabre",
     "id": 63,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -706,7 +706,7 @@
     "game": "Monster Hunter series",
     "character": "Guild Handler lines",
     "id": 71,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -776,7 +776,7 @@
     "game": "The Legend of Zelda: Breath of the Wild (JP)",
     "character": "Revali",
     "id": 78,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -856,7 +856,7 @@
     "game": "JoJo’s Bizarre Adventure: All-Star Battle",
     "character": "Giorno Giovanna",
     "id": 86,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -866,7 +866,7 @@
     "game": "Dragon Quest series",
     "character": "Recurring command voice",
     "id": 87,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -876,7 +876,7 @@
     "game": "Kingdom Hearts series (JP dub)",
     "character": "Sora",
     "id": 88,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1036,7 +1036,7 @@
     "game": "Steins;Gate: My Darling's Embrace",
     "character": "Rintaro Okabe",
     "id": 104,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1046,7 +1046,7 @@
     "game": "Danganronpa series",
     "character": "Makoto Naegi",
     "id": 105,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1096,7 +1096,7 @@
     "game": "Dragon Quest XI",
     "character": "Hero / party lines",
     "id": 110,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1126,7 +1126,7 @@
     "game": "Final Fantasy Type-0",
     "character": "Class Zero",
     "id": 113,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1156,7 +1156,7 @@
     "game": "Onimusha series",
     "character": "Nobunaga Oda",
     "id": 116,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

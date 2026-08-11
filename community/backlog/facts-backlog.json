@@ -56,7 +56,7 @@
   {
     "id": 10,
     "fact": "Raw horse meat, called 'basashi' (馬刺し), is a popular delicacy in Kumamoto prefecture, often served frozen or thinly sliced with soy sauce and ginger.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 14,
     "fact": "There's a Japanese concept called 'kaizen' (改善) meaning continuous improvement, which became a cornerstone of global manufacturing practices.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -98,7 +98,7 @@
   {
     "id": 17,
     "fact": "The Japanese practice 'forest bathing' (shinrin-yoku) has been scientifically proven to lower cortisol levels and boost the immune system.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -176,7 +176,7 @@
   {
     "id": 30,
     "fact": "The Japanese word 'boketto' (ぼけっと) describes the act of gazing vacantly into the distance without thinking about anything specific.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -296,7 +296,7 @@
   {
     "id": 50,
     "fact": "Japanese farmers grow cubic watermelons in glass boxes - not for taste but because they're easier to stack and refrigerate.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -572,7 +572,7 @@
   {
     "id": 96,
     "fact": "Japan has some of the world's oldest trees - a Japanese cedar called Jōmon Sugi on Yakushima is estimated to be 2,000-7,000 years old.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -704,7 +704,7 @@
   {
     "id": 118,
     "fact": "Japan has 'cuddle therapy' clinics where you can pay to be held, spooned, or simply have physical human contact.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -764,7 +764,7 @@
   {
     "id": 128,
     "fact": "Japan has 'host clubs' where women pay to be flattered and entertained by handsome young men over expensive drinks.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -776,7 +776,7 @@
   {
     "id": 130,
     "fact": "Japan has a toilet museum in Kitakyushu where you can slide down a giant toilet and learn about sewage history.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -842,7 +842,7 @@
   {
     "id": 141,
     "fact": "The word 'okage-sama de' (おかげさまで) means 'thanks to you' but implies gratitude to unseen forces and luck too.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -944,7 +944,7 @@
   {
     "id": 158,
     "fact": "Japan has 'melon bread' (melonpan) that contains no melon - it's named for the cookie crust pattern resembling a melon.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1094,7 +1094,7 @@
   {
     "id": 183,
     "fact": "There's a Japanese word 'nakama' (仲間) for companions who are closer than friends but not quite family - a chosen tribe.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1130,7 +1130,7 @@
   {
     "id": 189,
     "fact": "The word 'utsukushii' (美しい) means beautiful but implies something naturally elegant rather than artificially pretty.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1160,7 +1160,7 @@
   {
     "id": 194,
     "fact": "Japan has a festival where runners dressed as demons chase and catch women to bless them with good marriage luck.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1208,7 +1208,7 @@
   {
     "id": 202,
     "fact": "In Japan, many shops display realistic food replicas called 'shokuhin sampuru' (食品サンプル) to show menu items.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1226,7 +1226,7 @@
   {
     "id": 205,
     "fact": "Japan has 'eki-stamps' (駅スタンプ) — collectible rubber stamps at train stations that travelers gather like a passport.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1376,7 +1376,7 @@
   {
     "id": 230,
     "fact": "The Japanese word 'nagori' (名残) describes the lingering feeling when a season is ending — like the last strawberries of spring.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1436,7 +1436,7 @@
   {
     "id": 240,
     "fact": "The phrase 'ichigo ichie' (一期一会) means 'one time, one meeting' — reminding people to treasure each encounter.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1562,7 +1562,7 @@
   {
     "id": 261,
     "fact": "Japan’s 'machi-nami hozon' movement preserves historic townscapes, protecting old streets so locals can still live and work there.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1766,7 +1766,7 @@
   {
     "id": 295,
     "fact": "A 'shuincho' (朱印帳) is a stamp book used to collect shrine and temple seals during visits across Japan.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1874,7 +1874,7 @@
   {
     "id": 313,
     "fact": "The phrase 'yoroshiku onegaishimasu' (よろしくお願いします) is a versatile expression for 'please take care of me.'",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -1904,7 +1904,7 @@
   {
     "id": 318,
     "fact": "The word 'sukiyaki' refers both to the dish and to a style of cooking ingredients at the table.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

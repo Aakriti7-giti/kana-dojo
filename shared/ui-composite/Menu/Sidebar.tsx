@@ -355,47 +355,34 @@ const Sidebar = () => {
   const [loadedExperiments, setLoadedExperiments] = useState<Experiment[]>([]);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
   const isVisible = useScrollVisibility();
-  const [isDesktopSidebarCollapsed, setIsDesktopSidebarCollapsed] = useState(
-    () => {
-      if (typeof window === 'undefined') return false;
-      return (
-        sessionStorage.getItem(SIDEBAR_DESKTOP_COLLAPSED_STORAGE_KEY) === 'true'
-      );
-    },
-  );
-  const [hasVisitedPreferences, setHasVisitedPreferences] = useState(() => {
-    if (typeof window === 'undefined') return false;
-
-    return (
-      localStorage.getItem(SIDEBAR_PREFERENCES_VISITED_STORAGE_KEY) === 'true'
-    );
-  });
+  const [isDesktopSidebarCollapsed, setIsDesktopSidebarCollapsed] =
+    useState(false);
+  const [hasVisitedPreferences, setHasVisitedPreferences] = useState(false);
 
   // Collapse state for all collapsible sections
-  const [isAcademyExpanded, setIsAcademyExpanded] = useState(() => {
-    if (typeof window === 'undefined') return false;
+  const [isAcademyExpanded, setIsAcademyExpanded] = useState(false);
+  const [isToolsExpanded, setIsToolsExpanded] = useState(false);
+  const [isExperimentsExpanded, setIsExperimentsExpanded] = useState(false);
 
-    const stored = sessionStorage.getItem(
-      `${SIDEBAR_SECTION_STORAGE_PREFIX}academy`,
+  // Sync from sessionStorage/localStorage on mount (browser only)
+  useEffect(() => {
+    setIsDesktopSidebarCollapsed(
+      sessionStorage.getItem(SIDEBAR_DESKTOP_COLLAPSED_STORAGE_KEY) === 'true',
     );
-    return stored === null ? false : stored === 'true';
-  });
-  const [isToolsExpanded, setIsToolsExpanded] = useState(() => {
-    if (typeof window === 'undefined') return false;
-
-    const stored = sessionStorage.getItem(
-      `${SIDEBAR_SECTION_STORAGE_PREFIX}tools`,
+    setHasVisitedPreferences(
+      localStorage.getItem(SIDEBAR_PREFERENCES_VISITED_STORAGE_KEY) === 'true',
     );
-    return stored === null ? false : stored === 'true';
-  });
-  const [isExperimentsExpanded, setIsExperimentsExpanded] = useState(() => {
-    if (typeof window === 'undefined') return false;
-
-    const stored = sessionStorage.getItem(
-      `${SIDEBAR_SECTION_STORAGE_PREFIX}experiments`,
-    );
-    return stored === null ? false : stored === 'true';
-  });
+    for (const [stateKey, setter] of [
+      ['academy', setIsAcademyExpanded],
+      ['tools', setIsToolsExpanded],
+      ['experiments', setIsExperimentsExpanded],
+    ] as const) {
+      const stored = sessionStorage.getItem(
+        `${SIDEBAR_SECTION_STORAGE_PREFIX}${stateKey}`,
+      );
+      if (stored !== null) setter(stored === 'true');
+    }
+  }, []);
 
   useEffect(() => {
     const EXPERIMENTS_ORDER_KEY = 'sidebar-experiments-order';

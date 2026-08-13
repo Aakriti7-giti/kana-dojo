@@ -94,5 +94,11 @@
    "backgroundColor": "oklch(92.0% 0.025 140.0 / 1)",
    "mainColor": "oklch(55.0% 0.180 140.0 / 1)",
    "secondaryColor": "oklch(70.0% 0.120 80.0 / 1)"
+  },
+  {
+    "id": "izakaya-warm",
+    "backgroundColor": "oklch(20.0% 0.045 35.0 / 1)",
+    "mainColor": "oklch(70.0% 0.165 30.0 / 1)",
+    "secondaryColor": "oklch(80.0% 0.115 65.0 / 1)"
   }
 ]

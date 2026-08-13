@@ -363,6 +363,7 @@ const Sidebar = () => {
   const [isAcademyExpanded, setIsAcademyExpanded] = useState(false);
   const [isToolsExpanded, setIsToolsExpanded] = useState(false);
   const [isExperimentsExpanded, setIsExperimentsExpanded] = useState(false);
+  const [hasRestoredSidebarState, setHasRestoredSidebarState] = useState(false);
 
   // Sync from sessionStorage/localStorage on mount (browser only)
   useEffect(() => {
@@ -382,6 +383,7 @@ const Sidebar = () => {
       );
       if (stored !== null) setter(stored === 'true');
     }
+    setHasRestoredSidebarState(true);
   }, []);
 
   useEffect(() => {
@@ -448,39 +450,39 @@ const Sidebar = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!hasRestoredSidebarState) return;
 
     sessionStorage.setItem(
       `${SIDEBAR_SECTION_STORAGE_PREFIX}academy`,
       String(isAcademyExpanded),
     );
-  }, [isAcademyExpanded]);
+  }, [hasRestoredSidebarState, isAcademyExpanded]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!hasRestoredSidebarState) return;
 
     sessionStorage.setItem(
       `${SIDEBAR_SECTION_STORAGE_PREFIX}tools`,
       String(isToolsExpanded),
     );
-  }, [isToolsExpanded]);
+  }, [hasRestoredSidebarState, isToolsExpanded]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!hasRestoredSidebarState) return;
 
     sessionStorage.setItem(
       `${SIDEBAR_SECTION_STORAGE_PREFIX}experiments`,
       String(isExperimentsExpanded),
     );
-  }, [isExperimentsExpanded]);
+  }, [hasRestoredSidebarState, isExperimentsExpanded]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!hasRestoredSidebarState) return;
     sessionStorage.setItem(
       SIDEBAR_DESKTOP_COLLAPSED_STORAGE_KEY,
       String(isDesktopSidebarCollapsed),
     );
-  }, [isDesktopSidebarCollapsed]);
+  }, [hasRestoredSidebarState, isDesktopSidebarCollapsed]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -591,7 +593,8 @@ const Sidebar = () => {
         'z-50',
         'border-(--border-color) max-lg:items-center max-lg:justify-evenly max-lg:border-t-2 max-lg:py-2',
         'lg:h-auto lg:border-r lg:px-3',
-        'lg:transition-[width] lg:duration-300 lg:ease-in-out',
+        hasRestoredSidebarState &&
+          'lg:transition-[width] lg:duration-300 lg:ease-in-out',
         isDesktopSidebarCollapsed ? 'lg:w-20' : 'lg:w-80',
         'lg:pb-4',
       )}

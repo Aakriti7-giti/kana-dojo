@@ -559,5 +559,16 @@
     "Arctic Ocean"
   ],
   "correctIndex": 2
+},
+  {
+  "question": "Which animal is famously associated with Inari shrines in Japan?",
+  "difficulty": "easy",
+  "answers": [
+    "Fox",
+    "Crane",
+    "Turtle",
+    "Deer"
+  ],
+  "correctIndex": 0
 }
 ]

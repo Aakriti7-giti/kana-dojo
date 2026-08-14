@@ -705,7 +705,7 @@
   "english": "Mama mama mama. (alt wording 29) (alt wording 81)",
   "anime": "One Piece",
   "character": "Charlotte Linlin (Big Mom)"
-},
+  },
   {
     "japanese": "仲間を大切にしない奴はそれ以上のクズだ",
     "romaji": "Nakama o taisetsu ni shinai yatsu wa sore ijou no kuzu da",
@@ -714,10 +714,26 @@
     "character": "Kakashi Hatake"
   },
   {
-  "japanese": "オレ様の美技にブギウギ",
-  "romaji": "Ore-sama no bigi ni bugiugi",
-  "english": "Dance to my beautiful technique! (alt wording 23) (alt wording 75)",
-  "anime": "The Prince of Tennis",
-  "character": "Keigo Atobe"
-}
+    "japanese": "オレ様の美技にブギウギ",
+    "romaji": "Ore-sama no bigi ni bugiugi",
+    "english": "Dance to my beautiful technique! (alt wording 23) (alt wording 75)",
+    "anime": "The Prince of Tennis",
+    "character": "Keigo Atobe"
+  },
+  {
+    "japanese": "このジョルノ・ジョバァーナには夢がある！",
+    "romaji": "Kono Joruno Jobana ni wa yume ga aru!",
+    "english": "I, Giorno Giovanna, have a dream! (alt wording 5)",
+    "anime": "JoJo's Bizarre Adventure: Golden Wind",
+    "character": "Giorno Giovanna"
+  
+  },
+  {
+  "japanese": "笑えばいいと思うよ",
+  "romaji": "Waraeba ii to omou yo",
+  "english": "I think you should just laugh.",
+  "anime": "Neon Genesis Evangelion",
+  "character": "Rei Ayanami"
+  }
 ]
+

@@ -118,5 +118,11 @@
     "backgroundColor": "oklch(22.0% 0.035 140.0 / 1)",
     "mainColor": "oklch(74.0% 0.145 135.0 / 1)",
     "secondaryColor": "oklch(65.0% 0.085 115.0 / 1)"
+  },
+  {
+    "id": "taisho-cafe",
+    "backgroundColor": "oklch(18.0% 0.028 65.0 / 1)",
+    "mainColor": "oklch(72.0% 0.115 65.0 / 1)",
+    "secondaryColor": "oklch(60.0% 0.085 25.0 / 1)"
   }
 ]

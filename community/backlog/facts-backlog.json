@@ -1322,7 +1322,7 @@
   {
     "id": 221,
     "fact": "Japan has 'shuumatsu okashi' trends where limited-edition sweets appear for a season and then disappear, making them collectible.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

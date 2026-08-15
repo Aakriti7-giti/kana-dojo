@@ -936,7 +936,7 @@
     "game": "Yakuza: Like a Dragon",
     "character": "Ichiban Kasuga",
     "id": 94,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

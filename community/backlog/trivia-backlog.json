@@ -557,7 +557,9 @@
     ],
     "correctIndex": 0,
     "completed": false,
-    "issued": true
+    "issued": false,
+    "completedBy": "Gugster777",
+    "completedPR": 28443
   },
   {
     "id": 41,

@@ -916,7 +916,7 @@
     "game": "Pokemon series",
     "character": "Rival characters",
     "id": 92,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

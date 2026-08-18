@@ -1050,8 +1050,10 @@
     "backgroundColor": "oklch(16.0% 0.035 35.0 / 1)",
     "mainColor": "oklch(75.0% 0.165 55.0 / 1)",
     "secondaryColor": "oklch(62.0% 0.185 20.0 / 1)",
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "TejasButani001",
+    "completedPR": 28567
   },
   {
     "id": "sumi-charcoal",

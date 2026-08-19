@@ -50,7 +50,7 @@
     "dont": "ご飯に箸を立てる",
     "note": "立て箸は弔事連想のため避ける。",
     "id": 6,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -77,7 +77,7 @@
     "dont": "話を遮る",
     "note": "合意形成を重視する文化。",
     "id": 9,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -86,7 +86,7 @@
     "dont": "割り込む",
     "note": "駅・店頭では順番厳守。",
     "id": 10,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -815,7 +815,7 @@
     "dont": "値段を強調する",
     "note": "謙遜表現が好まれる。",
     "id": 91,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

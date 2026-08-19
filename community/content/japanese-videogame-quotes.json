@@ -294,17 +294,17 @@
     "character": "Ichiban Kasuga"
   },
   {
+  "japanese": "世界を救うって、そういうことだろ？",
+  "romaji": "Sekai o sukuu tte, sou iu koto daro?",
+  "english": "Saving the world means doing this, right?",
+  "game": "Persona 5 Strikers",
+  "character": "Joker"
+},
+  {
     "japanese": "この戦い、負けられない！",
     "romaji": "Kono tatakai, makerarenai!",
     "english": "I cannot lose this fight!",
     "game": "Fire Emblem series",
     "character": "Various protagonists"
-  },
-  {
-    "japanese": "世界を救うって、そういうことだろ？",
-    "romaji": "Sekai o sukuu tte, sou iu koto daro?",
-    "english": "Saving the world means doing this, right?",
-    "game": "Persona 5 Strikers",
-    "character": "Joker"
-  },
+  }
 ]

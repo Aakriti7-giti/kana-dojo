@@ -446,7 +446,7 @@
     "game": "Danganronpa series",
     "character": "Makoto Naegi",
     "id": 45,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

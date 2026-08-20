@@ -1880,7 +1880,7 @@
   {
     "id": 314,
     "fact": "'Wabi-sabi' is the appreciation of beauty in imperfection and the natural aging of materials.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {

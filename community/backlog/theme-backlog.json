@@ -187,9 +187,7 @@
     "mainColor": "oklch(45.0% 0.105 75.0 / 1)",
     "secondaryColor": "oklch(55.0% 0.080 60.0 / 1)",
     "issued": false,
-    "completed": false,
-    "completedBy": "ShenSandaru",
-    "completedPR": 29083
+    "completed": false
   },
   {
     "id": "volcanic-ash",
@@ -1559,9 +1557,7 @@
     "mainColor": "oklch(68.0% 0.085 60.0 / 1)",
     "secondaryColor": "oklch(58.0% 0.045 70.0 / 1)",
     "issued": false,
-    "completed": false,
-    "completedBy": "akondi-athreya",
-    "completedPR": 28806
+    "completed": false
   },
   {
     "id": "ruby-kabuki",

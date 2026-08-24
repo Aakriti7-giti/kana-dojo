@@ -187,7 +187,9 @@
     "mainColor": "oklch(45.0% 0.105 75.0 / 1)",
     "secondaryColor": "oklch(55.0% 0.080 60.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": false,
+    "completedBy": "ShenSandaru",
+    "completedPR": 29083
   },
   {
     "id": "volcanic-ash",

@@ -547,7 +547,9 @@
     "mainColor": "oklch(68.0% 0.175 30.0 / 1)",
     "secondaryColor": "oklch(78.0% 0.125 45.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": false,
+    "completedBy": "digvijaysai29",
+    "completedPR": 29188
   },
   {
     "id": "izakaya-warm",

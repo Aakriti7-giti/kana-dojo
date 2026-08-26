@@ -1131,7 +1131,9 @@
     "mainColor": "oklch(88.0% 0.020 240.0 / 1)",
     "secondaryColor": "oklch(68.0% 0.110 310.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": false,
+    "completedBy": "AndwSX",
+    "completedPR": 29220
   },
   {
     "id": "golden-kintsugi",
